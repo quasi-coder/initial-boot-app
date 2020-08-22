@@ -1,0 +1,21 @@
+management:
+  security:
+    enabled: false
+server:
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: password
+    key-store-type: JKS
+    key-alias: divyashree
+    key-password: password
+---
+
+spring:
+  profiles: dev
+server:
+  port: 8000
+---
+spring:
+  profiles: test
+server:
+  port: 9000
